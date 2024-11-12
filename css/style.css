@@ -1,57 +1,74 @@
+/* Resetando margens e padding */
 * {
     box-sizing: border-box;
 }
 
+/* Estilo geral do corpo da página */
 body {
     font-family: Arial, sans-serif;
     color: #333;
     margin: 0;
     padding: 20px;
     background: url(../img/FundoBlue.png);
-    
     background-size: cover;  /* Para a imagem cobrir toda a tela */
     background-position: center;  /* Para centralizar a imagem */
-    background-repeat: repeat;  /* Evitar repetição da imagem */
+    background-repeat: no-repeat;  /* Evitar repetição da imagem */
+    height: 100vh;  /* Garantir que a imagem de fundo ocupe toda a tela */
 }
 
-
+/* Estilo para o container principal */
 .container {
     text-align: center;  /* Centraliza o conteúdo dentro da .container */
-    max-width: 600px;
-    margin-top: 150px;
-    margin-left: 310px;
+    max-width: 600px;  /* Largura máxima para telas grandes */
+    margin-top: 50px;  /* Ajuste de margem superior para evitar que o conteúdo fique muito no topo */
+    margin-left: auto;  /* Centraliza automaticamente no eixo horizontal */
+    margin-right: auto; /* Centraliza automaticamente no eixo horizontal */
     background: #ebebf0;
-    padding: 70px;
+    padding: 40px 25px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Esconde elementos com a classe .hidden */
 .hidden {
     display: none;
 }
-/* Estilo para as perguntas e suas opções */
+
+/* Estilo para as perguntas e opções */
 #question-container {
     margin-bottom: 20px;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px 0;
 }
+
 h1, h2 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 20px;
     text-align: center;
 }
 
+/* Estilo para os botões */
 button {
     display: block;
     margin: 20px auto;
-    padding: 10px 20px;
+    padding: 12px 30px;
     background: #1b2139;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 15px;
-  
+    font-size: 16px;
+    transition: background 0.3s ease;
 }
-a{
-    font-size: 15px;
 
+button:hover {
+    background: #353e64;
+}
+
+a {
+    font-size: 15px;
     color: white;
     border-radius: 5px;
     border: none;
@@ -60,11 +77,91 @@ a{
     display: block;
 }
 
-
-button:hover {
-    background: #353e64;
-}
-
+/* Estilo para o botão de "voltar" */
 .voltar {
     background: #198754;
+    margin: 20px auto;
+}
+
+.voltar:hover {
+    background: #157347;
+}
+
+/* Media Query para o iPhone 14 Pro Max e dispositivos com largura até 430px */
+@media only screen and (max-width: 430px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        max-width: 90%; /* Ajusta o container para a largura máxima */
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+    h1, h2 {
+        font-size: 20px; /* Ajusta o tamanho da fonte para os títulos */
+    }
+
+    button {
+        font-size: 14px; /* Ajusta o tamanho da fonte do botão */
+        padding: 10px 25px; /* Ajusta o padding do botão */
+    }
+
+    .voltar {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Media Query para telas menores, como iPhone 11, X, etc (máximo 375px de largura) */
+@media only screen and (max-width: 375px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 85%; /* Maior largura em dispositivos pequenos */
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-size: 18px; /* Ajusta o tamanho da fonte para títulos em telas menores */
+    }
+
+    button {
+        font-size: 13px; /* Fonte menor em botões */
+        padding: 8px 20px;
+    }
+
+    .voltar {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+}
+
+/* Media Query para telas muito pequenas, como iPhone SE ou outros dispositivos com largura até 320px */
+@media only screen and (max-width: 320px) {
+    body {
+        padding: 8px;
+    }
+
+    .container {
+        max-width: 95%; /* Usa quase toda a largura da tela */
+        padding: 12px;
+    }
+
+    h1, h2 {
+        font-size: 16px; /* Reduz ainda mais o tamanho da fonte */
+    }
+
+    button {
+        font-size: 12px; /* Fonte bem menor em botões */
+        padding: 8px 15px;
+    }
+
+    .voltar {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
 }
