@@ -4,17 +4,24 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     color: #333;
     margin: 0;
     padding: 20px;
+    background: url(../img/FundoBlue.png);
+    
+    background-size: cover;  /* Para a imagem cobrir toda a tela */
+    background-position: center;  /* Para centralizar a imagem */
+    background-repeat: repeat;  /* Evitar repetição da imagem */
 }
 
+
 .container {
+    text-align: center;  /* Centraliza o conteúdo dentro da .container */
     max-width: 600px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 20px;
+    margin-top: 150px;
+    margin-left: 310px;
+    background: #ebebf0;
+    padding: 70px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -22,7 +29,10 @@ body {
 .hidden {
     display: none;
 }
-
+/* Estilo para as perguntas e suas opções */
+#question-container {
+    margin-bottom: 20px;
+}
 h1, h2 {
     text-align: center;
 }
@@ -31,13 +41,30 @@ button {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background: #3498db;
+    background: #1b2139;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 15px;
+  
+}
+a{
+    font-size: 15px;
+
+    color: white;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
 }
 
+
 button:hover {
-    background: #2980b9;
+    background: #353e64;
+}
+
+.voltar {
+    background: #198754;
 }

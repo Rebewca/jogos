@@ -92,4 +92,9 @@ nextButton.addEventListener('click', () => {
 });
 
 // Iniciar o jogo ao carregar a página
-startGame();
+startGame(
+    
+);
+
+
+
