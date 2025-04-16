@@ -1,167 +1,334 @@
-/* Resetando margens e padding */
-* {
-    box-sizing: border-box;
-}
+/* google fonts */
 
-/* Estilo geral do corpo da página */
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-    background: url(../img/FundoBlue.png);
-    background-size: cover;  /* Para a imagem cobrir toda a tela */
-    background-position: center;  /* Para centralizar a imagem */
-    background-repeat: no-repeat;  /* Evitar repetição da imagem */
-    height: 100vh;  /* Garantir que a imagem de fundo ocupe toda a tela */
-}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-/* Estilo para o container principal */
-.container {
-    text-align: center;  /* Centraliza o conteúdo dentro da .container */
-    max-width: 600px;  /* Largura máxima para telas grandes */
-    margin-top: 50px;  /* Ajuste de margem superior para evitar que o conteúdo fique muito no topo */
-    margin-left: auto;  /* Centraliza automaticamente no eixo horizontal */
-    margin-right: auto; /* Centraliza automaticamente no eixo horizontal */
-    background: #ebebf0;
-    padding: 40px 25px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+/* estilos fonts */
+/* bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  */
 
-/* Esconde elementos com a classe .hidden */
-.hidden {
-    display: none;
-}
 
-/* Estilo para as perguntas e opções */
-#question-container {
-    margin-bottom: 20px;
-    font-size: 16px;
-    padding: 10px 20px;
-    margin: 10px 0;
-}
+/* variavel das cores */
+ :root {
 
-h1, h2 {
+    --background-color: rgba(24, 34, 48, 0.555);
+
+    --fundo-menu-lateral: #755f8a;
+    --fundo-claro: #a6afb4;
+    --fundo-escuro: #15242c;
+
+    --borda-clara: #38E0F2;
+    --borda-escura: #037F8C;
+
+    --texto-escuro: #ffffff;
+    --texto-claro: #343a3d;
+    --texto-branco: #ecf8ff;
+    --texto-hover: #2d5c61;
+    --texto-opaco: #2c2e30;
+
+    --cor-detalhes: #501055ea;
+
+    --texto-titulo-claro: #33737a;
+    --texto-titulo-escuro: #037F8C;
+
+    --sombra-clara: rgba(255, 255, 255, 1);
+    --sombra-escura: rgba(31, 31, 31, 0.1);
+}
+/* Css geral */
+body{ 
+font-family:'Courier New', Courier, monospace ;
+color: var(--texto-escuro);
+background: var(--fundo-escuro);  
+
+}
+ /* cabeçalho */
+
+ #header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0; /* vertical */
+    width: 300px;
+    background-color: var(--fundo-menu-lateral);
+    padding: 0 15px;
+    overflow-y: auto ;
+    z-index: 99;
+    transition: all ease-in-out 0.5s;
+ }
+
+
+ #header .perfil img {
+    margin: 15px auto;
+    display: block;
+    width: 120px;
+    border: 2px solid var(--borda-clara);
+    box-shadow: 0 0 5px var(--sombra-clara);
+ }
+
+ #header .perfil h1 {
     font-size: 24px;
-    line-height: 1.3;
-    margin-bottom: 20px;
+    margin: 25px;
+    padding: 0;
+    font-weight: 600;
     text-align: center;
+    color: wheat;
+ }
+
+ /* Redes Sociais */
+
+ .perfil .social-links i {
+    font-size: 18px;
+    display: inline-block;
+    background: transparent;
+    color: var(--texto-claro);
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 5px;
+    border-radius: 50%;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 5px 0px var(--sombra-clara);
 }
 
-/* Estilo para os botões */
-button {
-    display: block;
-    margin: 20px auto;
-    padding: 12px 30px;
-    background: #1b2139;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s ease;
+.perfil .social-links a:hover,
+.social-links i:hover {
+    font-size: 18px;
+    display: inline-block;
+    background: white;
+    color: black;
+    margin-right: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    box-shadow: 0px 0px 5px 0px var(--sombra-clara);
 }
-
-button:hover {
-    background: #353e64;
-}
-
-a {
-    font-size: 15px;
-    color: white;
-    border-radius: 5px;
-    border: none;
+a{
     text-decoration: none;
+
+}
+
+/* menu mobile */
+
+.mobile-nav-toggle {
+    position: fixed; /* class */
+    top: 15px; /* superior */
+    right: 15px;
+    z-index: 9999;/* sobreposiçao */
+    border: 0;
+    font-size: 26px; /* icone de texto */
+    transition: all 0.4s; /* efeito de transition */
+    background: var(--cor-detalhes);
+    color: var(--texto-claro);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* alinhar em horizontal */
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
     cursor: pointer;
-    display: block;
+
 }
 
-/* Estilo para o botão de "voltar" */
-.voltar {
-    background: #198754;
-    margin: 20px auto;
+.mobile-nav-active {
+    overflow: hidden;
 }
 
-.voltar:hover {
-    background: #157347;
+.mobile-nav-active #header {
+    left: 0;
 }
 
-/* Media Query para o iPhone 14 Pro Max e dispositivos com largura até 430px */
-@media only screen and (max-width: 430px) {
-    body {
-        padding: 15px;
+/* ajuste para o corpo do conteudo */
+
+/* menu responsivo */
+
+@media(max-width: 1199px) {
+    #header {
+        left: -300px;
     }
-
+    #main {
+        margin-left: 0;
+    }
     .container {
-        max-width: 90%; /* Ajusta o container para a largura máxima */
-        padding: 20px;
-        margin-top: 30px;
-    }
-
-    h1, h2 {
-        font-size: 20px; /* Ajusta o tamanho da fonte para os títulos */
-    }
-
-    button {
-        font-size: 14px; /* Ajusta o tamanho da fonte do botão */
-        padding: 10px 25px; /* Ajusta o padding do botão */
-    }
-
-    .voltar {
-        padding: 10px 20px;
-        font-size: 14px;
+        padding-left: 12px;
+        padding-right: 12px ;
     }
 }
 
-/* Media Query para telas menores, como iPhone 11, X, etc (máximo 375px de largura) */
-@media only screen and (max-width: 375px) {
-    body {
-        padding: 10px;
-    }
+/* menu header */
 
-    .container {
-        max-width: 85%; /* Maior largura em dispositivos pequenos */
-        padding: 15px;
-    }
-
-    h1, h2 {
-        font-size: 18px; /* Ajusta o tamanho da fonte para títulos em telas menores */
-    }
-
-    button {
-        font-size: 13px; /* Fonte menor em botões */
-        padding: 8px 20px;
-    }
-
-    .voltar {
-        padding: 8px 15px;
-        font-size: 13px;
-    }
+.nav-menu * {
+    padding:0 ;
+    margin: 0;
+    list-style: none;
+}
+.nav-menu {
+    padding: 30px 0 0 0;
 }
 
-/* Media Query para telas muito pequenas, como iPhone SE ou outros dispositivos com largura até 320px */
-@media only screen and (max-width: 320px) {
-    body {
-        padding: 8px;
-    }
-
-    .container {
-        max-width: 95%; /* Usa quase toda a largura da tela */
-        padding: 12px;
-    }
-
-    h1, h2 {
-        font-size: 16px; /* Reduz ainda mais o tamanho da fonte */
-    }
-
-    button {
-        font-size: 12px; /* Fonte bem menor em botões */
-        padding: 8px 15px;
-    }
-
-    .voltar {
-        padding: 8px 12px;
-        font-size: 12px;
-    }
+.nav-menu>ul>li {
+    position: relative;
+    white-space: nowrap;
+    font-weight: 500;
 }
+
+.nav-menu a,
+.nav-menu:focus {
+    display: flex;
+    align-items: center;
+    color: var(--texto-opaco);
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.nav-menu a i,
+.nav-menu:focus i {
+    font-size: 22px;
+    padding-right: 10px;
+    color: rgb(36, 57, 100);
+    font-weight: 400;
+} 
+
+.nav-menu a:hover,
+.nav-menu .active, /* click */
+.nav-menu .active:focus, 
+.nav-menu li:hover> a {
+    text-decoration: none;
+    color: var(--texto-claro);
+}
+
+.nav-menu a:hover i,
+.nav-menu .active i, /* click */
+.nav-menu .active:focus i, 
+.nav-menu li:hover> a i {
+
+    color: var(--cor-detalhes);
+    font-weight: 400;
+}
+
+/* Hero */
+#hero {
+    width: 100%;
+    height: 100vh; /* view ocupe o contener */
+    background: url("../img/bg-hero.jpg.jpg") center; 
+    /* criar img na I.A */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    background-color: rgba(31, 31, 31, 0.5);
+}
+
+#hero .hero-container {
+    z-index: 3;
+    position: relative;
+    min-width: 300px;
+    
+}
+#hero h2 {
+    margin: 0;
+    font-size: 100px;
+    font-weight: 900px;
+    line-height: 1; /* altura da linha */
+    color: #d1dddf;
+
+}
+h2 {
+    background-color: #2d3c3d;
+}
+
+#hero p{
+
+columns: #fff;
+margin-bottom: 50px;
+}
+
+#hero p span {
+    color: #755f8a;
+    padding-bottom: 2px;
+    letter-spacing: -1px;
+    border-bottom: 3px solid #000000;
+    
+}
+
+
+/* estrutura base - corpo */
+
+#main {
+    margin-left: 300px;
+
+}
+
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+/* seções e titulos */
+
+section {
+    padding: 60px 0;
+    overflow: hidden;
+    background:#755f8a; /* clara */
+}
+
+.section-bg{
+    background: #718b99;
+    color: var(--texto-claro);
+
+}
+
+/* classe h2 */
+
+.section-title {
+    padding-bottom: 30px;
+
+}
+
+.section-title h2 {
+    color: var(--texto-escuro);
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+
+}
+
+.section-title h2::after {
+   content: "";
+   position: absolute;
+   background: #a9b0b1; 
+   width: 900px;
+   height: 3px;
+   display: block;
+   bottom: 0;
+   left: 0;
+}
+
+.section-title p {
+    margin-bottom: 0;
+}
+
+
+/* sobre */
+
+.sobre .content h3 {
+    color: #183357;
+    font-weight: 700;
+    font-size: 39px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }

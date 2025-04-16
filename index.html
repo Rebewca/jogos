@@ -1,31 +1,341 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saiba Seu Gerenciamento Financeiro</title>
+    <meta name="description" content="Conforto e estilo em cada baby tee!"> <!-- meta des= descrever algum produto -->
+    <meta name="keywords" content="baby tee, store, roupas, camisas, bewca, home, cores">
+    <!-- servem para a ulilização de palavras chaves -->
+    <title> Bewca|Store</title>
+
+    <!-- CSS Bootstrap -->
+    <!-- AOS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.css" rel="stylesheet"> -->
+    <!-- Pacote Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- responsivo -->
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- GLightbox Galeria de Imagens -->
+
+    <link href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css" rel="stylesheet">
+    <!-- sliders/carrosséis interativos. -->
+
+    <link href="https://cdn.jsdelivr.net/npm/swiper@9.4.0/swiper-bundle.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/favicon-32x32 (2).png" type="image/x-icon">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Descubra se você precisa direcionar seu gerenciamento financeiro</h1>
-        <div id="quiz">
-            <h2>Perguntas</h2>
-            <div id="question-container"></div>
-            <button id="next-button" class="hidden"> Próxima Pergunta</button>
-        </div>
-        <div id="result" class="hidden">
-            <h2>Resultado</h2>
-            <p id="result-text"></p>
-            <button id="restart-button">Reiniciar Jogo</button>
-        </div>
-    </div>
-    <div>
-        <button class="voltar"> <a href="https://julia-almeida18.github.io/MoneyIQ/">Página Inicial</a></button>
-    </div>
 
+    <!-- botao para alternar menu mobile -->
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"> </i> <!-- em telas pequenas -->
+
+    <!-- Cabeçalho -->
+    <header id="header">
+
+        <div class="d-flex flex-column">
+
+            <div class="perfil">
+
+                <img src="img/logo-1.png" alt="" class="img-fluid rounded-circle">
+
+                <h1 class="text-light"> Bewca|Store </h1>
+
+                <div class="social-links mt-3 text-center">
+
+
+
+                    <a href="" class="instagram" target="_blank">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                    <a href="#" class="facebook" target="_blank">
+                        <i class="bx bxl-facebook"></i>
+                    </a>
+                    <a href="#" class="linkedin" target="_blank">
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
+                    <a href="#" class="github" target="_blank">
+                        <i class="bx bxl-github"></i>
+                    </a>
+
+                </div> <!-- redes sociais -->
+
+
+            </div> <!-- fim perfil -->
+
+            <nav id="navbar" class="nav-menu navbar"> <!-- manipulado pelo js -->
+
+                <ul>
+                    <li>
+                        <a href="#hero" class="nav-link scrollto active">
+                            <i class="bi bi-house"> </i>
+                            <span> Home </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#sobre" class="nav-link scrollto">
+                            <i class="bx bx-user"> </i>
+                            <span> Sobre </span> <!-- sobre descriçao da marca -->
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#resume" class="nav-link scrollto">
+                            <i class="bi bi-file-earmark-text"> </i>
+                            <span> Resumo </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#portfolio" class="nav-link scrollto">
+                            <i class="bi bi-images"> </i>
+                            <span> Portfolio </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services" class="nav-link scrollto">
+                            <i class="bi bi-hdd-stack navicon"> </i>
+                            <span> Serviços </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contato" class="nav-link scrollto">
+                            <i class="bi bi-envelope navicon"> </i>
+                            <span> Contato </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+
+    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+        <!-- resumir oq a marca fara -->
+
+        <div class="hero-container">
+
+            <h2>BewcaStore</h2>
+
+            <p>Conforto e estilo em cada baby tee!
+
+                <span class="typed"
+                    data-typed-items="Baby Tee, Cores, Frias, Escuras, Autenticidade, Conforto, Estilo, Praticidade, Presença">
+                </span>
+            </p>
+
+
+
+        </div>
+
+
+
+    </section>
+
+    <!-- fim da hero -->
+
+    <main id="main"> <!-- main = organizar as seções -->
+
+
+        <!-- sobre a loja  -->
+        <section id="sobre" class="sobre">
+
+            <div class="container">
+                <div class="section-title">
+
+                    <h2>Desperte sua Presença com a Essência Baby Tee:</h2> <!-- sobre nós -->
+
+                    <p> Descubra a peça que redefine o básico com um toque de atitude. Nossas Baby Tees em tons frios e
+                        escuros são a personificação da autenticidade, abraçando seu corpo com o conforto que você
+                        merece e elevando seu estilo com praticidade e uma presença marcante. Vista a confiança em cada
+                        detalhe.</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <!-- img da marca -->
+                <div class="col-lg-4" data-aos="fade-right">
+
+                    <img class="img-fluid" src="img/ChatGPT Image 15_04_2025, 14_42_41.png" alt="">
+                </div>
+
+                <!-- textos  -->
+                <div class="col-lg-8 pt-4 pt-lg-0 content">
+                    <h3>O básico que transforma seu dia:</h3>
+                    <p class="fst-italic">
+                        Confiança começa com o que você veste, <br>e a gente cuida disso pra você.
+                    </p>
+
+                    <div class="row">
+
+                        <div class="col-lg-6">
+                            <ul>
+                                <li>
+                                    <i class="bi-bi-calendar-heart"></i>
+                                    <strong>Fundada em:</strong> <!-- em destaque -->
+                                    <span>2023, com amor pelo conforto e estilo.</span> <!-- info do texto -->
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-lightning-charge"></i>
+                                    <strong>Estilo:</strong>
+                                    <span>Casual e moderno, com toque minimalista.</span>
+
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <ul>
+                                <li>
+                                    <i class="bi bi-heart"></i>
+                                    <strong>Feito com carinho:</strong>
+                                    <span>Baby tees pensadas para te acompanhar em qualquer momento.</span>
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-envelope">
+                                        <span>bewca@gmail.com</span>
+
+
+                                    </i>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <p>
+
+                    </p>
+
+
+                </div>
+            </div>
+
+            </div>
+
+        </section>
+
+        <!-- conquistas -->
+
+
+        <section id="conquistas" class="conquistas">
+
+        </section>
+
+
+        <!-- habilidades e tops vendidos -->
+
+        <section id="skills" class="skills">
+
+        </section>
+
+
+        <!-- portfolio/ galeria-->
+
+        <section id="portfolio" class="portfolio">
+
+        </section>
+
+
+        <!-- serviços -->
+        <section id="services" class="services">
+
+        </section>
+
+
+        <!-- declarar feedback  -->
+
+        <section id="depoimentos" class="depoimentos">
+
+        </section>
+
+
+        <!--Formulario para meio de contato -->
+        <section id="contato" class="contato">
+
+        </section>
+
+
+
+    </main>
+
+    <footer id="footer">
+
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- JS Bootstrap -->
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.js"></script>
+    <!-- Pacote Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GLightbox Galeria de Imagens -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js"></script>
+    <!-- Filtro -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- Contator - estatísticas  -  Animações numéricas -->
+    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+    <!-- sliders/carrosséis interativos. -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9.4.0/swiper-bundle.min.js"></script>
+    <!-- animações de digitação automática. -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Animação Skills -->
+    <script src="https://cdn.jsdelivr.net/npm/waypoints/lib/noframework.waypoints.min.js"></script>
+
+
+    <!-- JS Principal -->
     <script src="js/script.js"></script>
-</body>
-</html>
 
+</body>
+
+</html>
